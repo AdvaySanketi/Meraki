@@ -1,0 +1,211 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<NewsScreen>
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            size_hint_y: None
+            height: dp(72)
+            padding: [dp(8), dp(16), dp(8), dp(4)]
+            BoxLayout:
+                orientation: "vertical"
+                canvas.before:
+                    Color:
+                        rgba: [1,0,0,0]
+                    RoundedRectangle:
+                        size: [(self.size[0]*.3), self.size[1]]
+                        pos: self.pos
+                        radius: [dp(4),]
+
+        BoxLayout:
+            size_hint_y: .6
+            orientation: "vertical"
+            BoxLayout:
+                size_hint_y: None
+                height: dp(56)
+                padding: [dp(8), dp(16), dp(8), dp(4)]
+                BoxLayout:
+                    canvas.before:
+                        Color:
+                            rgba: [1,0,0,0]
+                        RoundedRectangle:
+                            size: [(self.size[0]*.3), self.size[1]]
+                            pos: [self.pos[0], self.pos[1]-dp(4)]
+                            radius: [dp(2)]
+                    Text:
+                        text: "Top Headlines"
+                        font_name: "assets//Fonts//Poppins//Poppins-Bold.ttf"
+                        font_size: "35sp"
+                        color: [1,1,1,1]
+                    IconBtn:
+                        icon: 'chevron-right'
+                        ripple_scale: 0
+                        on_release:
+                            app.root.set_current("allnews")
+            BoxLayout:
+                ScrollView:
+                    size_hint_y: None
+                    height: self.parent.height
+                    bar_active_color: [0,0,0,0]
+                    bar_inactive_color: [0,0,0,0]
+                    do_scroll: [False, True]
+                    GridLayout:
+                        id: gl_all
+                        cols: 1
+                        size_hint_y: None
+                        height: self.minimum_height
+                        spacing: dp(1)
+                        padding: dp(12)
+
+        BoxLayout:
+            canvas:
+                Color:
+                    rgb: 0/255, 0/255, 0/255
+                Rectangle:
+                    size: self.size
+            orientation: 'horizontal'
+            padding: 25
+            spacing: 0
+            size_hint: 1, None
+            height: 50
+            MDIconButton:
+                icon: "home"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release:
+                    app.root.set_current("home")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "magnify"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("music")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "newspaper-variant"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "video"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("videos")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]     
+            MDIconButton:
+                icon: "account-circle"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("profile")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+
+    AnchorLayout:
+        anchor_x: "center"
+        anchor_y: "top"
+        padding: dp(30) , dp(10)
+
+        MDIconButton:
+            icon: "sticker-emoji"
+            font_size: sp(40)
+            theme_icon_color: "Custom"
+            icon_color: hex("#FEE715FF")
+            md_bg_color: hex("#101820FF")
+            icon_size: "40sp"
+            ripple_scale: 0
+            on_release:
+                root.show_joke()
+
+<JokeDialogContent>
+    orientation: "vertical"
+    adaptive_height: True
+    padding: dp(15)
+    spacing: dp(10)
+
+    MDIconButton:
+        icon: "sticker-emoji"
+        pos_hint: {"center_x": .5}
+        font_size: sp(40)
+        theme_icon_color: "Custom"
+        icon_color: hex("#FEE715FF")
+        md_bg_color: [0,0,0,0]
+        icon_size: "50sp"
+        ripple_scale: 0
+
+    Label:
+        text: root.joke
+        halign: "center"
+        size_hint_y: None
+        text_size: self.width, None
+        height: self.texture_size[1]
+        font_size: "30sp"
+        font_name: "assets//Fonts//Library.ttf"
+
+    MDIconButton:
+        icon: "heart-outline"
+        pos_hint: {"center_x": .5}
+        font_size: sp(40)
+        theme_icon_color: "Custom"
+        icon_color: [1,0,0,1]
+        md_bg_color: [0,0,0,0]
+        icon_size: "50sp"
+        ripple_scale: 0
+        on_release:
+            self.icon = "heart"

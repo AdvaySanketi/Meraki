@@ -1,0 +1,40 @@
+<MerakiScreen>
+    FloatLayout:
+        FitImage:
+            source: "assets//Images//scenery.jpg"
+        FloatLayout:
+            pos_hint: {"center_x": .72, "center_y": .99}
+            canvas:
+                Color:
+                    rgb: 1, 1, 1
+                Ellipse:
+                    pos: self.pos
+                    size: 200 , 200 
+                    source: 'assets//Images//logo.png'
+                    angle_start: 0
+                    angle_end: 360
+        Label:
+            text:'MERAKI'
+            pos_hint: {"center_x": .51, "center_y": .45}
+            font_name: "assets//Fonts//Poppins//Poppins-ExtraBold.ttf"
+            font_size: "30sp"
+        Label:
+            text:'Version 2.5.7'
+            pos_hint: {"center_x": .51, "center_y": .4}
+            font_name: "assets//Fonts//Poppins//Poppins-Bold.ttf"
+            font_size: "20sp"
+        Label:
+            text:'Advay Sanketi'
+            pos_hint: {"center_x": .51, "center_y": .3}
+            font_name: "assets//Fonts//BunchBlossoms.ttf"
+            font_size: "30sp"
+        Label:
+            text:'Meet Trivedi'
+            pos_hint: {"center_x": .51, "center_y": .2}
+            font_name: "assets//Fonts//BunchBlossoms.ttf"
+            font_size: "30sp"
+        Label:
+            text:'j'
+            pos_hint: {"center_x": .51, "center_y": .1}
+            font_name: "assets//Fonts//Hearts.ttf"
+            font_size: "70sp"

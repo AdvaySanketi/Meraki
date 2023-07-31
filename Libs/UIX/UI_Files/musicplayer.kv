@@ -1,0 +1,166 @@
+#:import get_color_from_hex kivymd.theming.get_color_from_hex
+
+<MusicPlayerScreen>:
+    app: app
+    slider: slider
+    FitImage:
+        id: cover
+        source: root.data['image']
+        color: [1, 0, 0, 1]
+        size_hint_y: None
+        height: root.height - play_card.height
+        pos_hint: {'top':1}
+        opacity: .6
+    FitImage:
+        source: 'assets//Images//shadow2.png'
+        size_hint_y: None
+        height: cover.height
+        pos_hint: {'top':1}
+    MDBoxLayout:
+        orientation: 'vertical'
+        spacing: '10dp'
+        MDBoxLayout:
+            padding: '10dp'
+            adaptive_height: True
+            color: [1, 0, 0, 1]
+            IconBtn:
+                icon: 'chevron-down'
+                on_release:
+                    app.root.set_current('music', 'down')
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: '5dp'
+            MDLabel:
+                text: root.data['track_name']
+                font_size: '28sp'
+                bold: True
+                size_hint_y: None
+                height: self.texture_size[1]
+                bold: True
+                padding: '15dp', 0
+                halign: 'center'
+
+            MDLabel:
+                text: root.data['singer']
+                size_hint_y: None
+                height: self.texture_size[1]
+                padding: '15dp', 0
+                font_size: '20sp'
+                halign: 'center'
+                opacity: .8
+        MDBoxLayout:
+            height: '90dp'
+            size_hint_y: None
+            MDFloatLayout:
+                size_hint_y: None
+                height: '80dp'
+                MDBoxLayout:
+                    pos_hint: {'center_y':.5, 'center_x':.5}
+                    padding: '27dp', 0
+                    MDBoxLayout:
+                        md_bg_color: get_color_from_hex('#7f93aaf0')
+                        radius: '10dp'    
+                MDBoxLayout:
+                    size_hint_y: None
+                    padding: '21dp', 0
+                    height: '75dp'
+                    pos_hint: {'y':0, 'center_x':.5}
+                    MDBoxLayout:
+                        radius: '10dp'
+                        md_bg_color: get_color_from_hex('#7f93aaf9')
+                MDBoxLayout:
+                    height: '70dp'
+                    padding: '15dp', 0
+                    size_hint_y: None
+                    pos_hint: {'y':0, 'center_x':.5}
+                    MDBoxLayout:
+                        radius: '10dp'
+                        padding: 0, '10dp'
+                        MusicCardNormal:
+                            image: root.data['image']
+                            track_name: root.data['track_name']
+                            singer: root.data['singer']
+                            time: root.data['time']
+
+        MDBoxLayout: 
+            id: play_card
+            md_bg_color: [0, 0, 0, 1]
+            height: '160dp'
+            size_hint_y: None
+            MDBoxLayout:
+                radius: '20dp', '20dp', 0, 0
+                orientation: 'vertical'
+                color: [1, 0, 0, 1]
+                MDFloatLayout:
+                    size_hint_y: None
+                    color: [1, 0, 0, 1]
+                    height: play_icon.height
+                    MDBoxLayout:
+                        padding: '20dp', 0
+                        pos_hint: {'center_y':.5, 'center_x':.5}
+                        MDIconButton:
+                            icon: 'skip-previous'
+                            theme_icon_color: "Custom"
+                            icon_color: 0,1,1,1
+                            font_size: '40dp'
+                            on_release:
+                                root.prev_music()
+                        Widget:
+                        MDIconButton:
+                            id: play_icon
+                            icon: 'pause' if root.is_playing == True else 'play'
+                            theme_icon_color: "Custom"
+                            icon_color: 0,1,1,1
+                            font_size: '55dp'
+                            on_press:
+                                root.play()
+                        Widget:
+                        MDIconButton:
+                            icon: 'skip-next'
+                            theme_icon_color: "Custom"
+                            icon_color: 0,1,1,1
+                            font_size: '40dp'
+                            on_release:
+                                root.next_music()
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '20dp', 0
+                    MDSlider:
+                        id: slider
+                        color: "blue"
+                        thumb_color_inactive: "blue"
+                        track_color_inactive: "white"
+                        max: float(str(int(root.data['length']/60)) + '.' + str(int(root.data['length'] % 60)))
+                        height: '20dp'
+                        size_hint_y: None
+                        hint: False
+                        show_off: True
+                    MDBoxLayout:
+                        adaptive_height: True
+                        MDLabel:
+                            text: "0:00"
+                            size_hint_y: None
+                            color: [1, 0, 0, 1]
+                            height: self.texture_size[1]
+                            font_size: '12sp'
+                        MDLabel:
+                            text: str(root.data['time'])
+                            halign: 'right'
+                            size_hint_y: None
+                            color: [1, 0, 0, 1]
+                            height: self.texture_size[1]
+                            font_size: '12sp'
+                    MDBoxLayout:
+                        MDIconButton:
+                            icon: 'shuffle' if root.shuffle == True else 'shuffle-disabled'
+                            theme_icon_color: "Custom"                            
+                            icon_color: 0,1,1,1 
+                            on_release:
+                                root.toggle_shuffle()
+                        Widget:
+                        MDIconButton:
+                            icon: 'repeat' if root.loop == True else 'repeat-off'
+                            theme_icon_color: "Custom"                            
+                            icon_color: 0,1,1,1 
+                            on_release:
+                                root.toggle_loop()

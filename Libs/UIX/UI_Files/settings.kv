@@ -1,0 +1,74 @@
+<SettingsScreen>
+    FloatLayout:
+        MDIconButton: 
+            icon: "arrow-left"
+            font_size: sp(40)
+            pos_hint: {"center_x": .1, "center_y": .92}
+            icon_size: "40sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            on_release: 
+                app.root.set_current("profile")
+        PLabel:
+            text: "Settings"
+            pos_hint: {"center_x": .5, "center_y": .92}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "32sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+        PBoxLayout:
+            orientation: "vertical"
+            pos_hint: {"center_x": .55, "center_y": .72}
+            ListItem:
+                text: "Account"
+                secondary_text: "Change Account Details"
+                icon: "key-variant"
+                on_release: 
+                    app.root.set_current("account")
+            ListItem:
+                text: "Security"
+                secondary_text: "Strengthen Account Security"
+                icon: "shield-account"
+                on_release: 
+                    app.root.set_current("security")
+            ListItem:
+                text: "Privacy"
+                secondary_text: "Set Privacy Preferences"
+                icon: "lock"
+                on_release: 
+                    app.root.set_current("privacy")
+            ListItem:
+                text: "Notifications"
+                secondary_text: "Set Notification Preferences"
+                icon: "bell"
+                on_release: 
+                    app.root.set_current("settings")
+            ListItem:
+                text: "Help"
+                secondary_text: "Contact Us"
+                icon: "help-circle-outline"
+                on_release: 
+                    app.root.set_current("help")
+            ListItem:
+                text: "Invite a Friend"
+                secondary_text: "Enjoy Meraki with Friends"
+                icon: "account-multiple"
+                on_release: 
+                    app.root.set_current("meraki")
+        AnchorLayout:
+            pos_hint: {"center_x":.5, "center_y":.14}
+            MDIconButton:
+                icon: "assets//Images//logo.png"
+                ripple_scale: 0
+        AnchorLayout:
+            pos_hint: {"center_x":.5, "center_y":.08}
+            Label:
+                text:'Advay Sanketi'
+                font_name: "assets//Fonts//Library.ttf"
+                font_size: "25sp"
+        AnchorLayout:
+            pos_hint: {"center_x":.5, "center_y":.04}
+            Label:
+                text:'Meet Trivedi'
+                font_name: "assets//Fonts//Library.ttf"
+                font_size: "25sp"

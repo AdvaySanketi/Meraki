@@ -1,0 +1,172 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<DLoginScreen>
+    MDFloatLayout:
+        FitImage:
+            source:"assets/Images/Backgrounds/bg (3).jpg"
+            opacity: .2
+        PLabel:
+            text: "Meraki"
+            pos_hint: {"center_x": .5, "center_y": .85}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "80sp"
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: hex("#ADEFD1FF")
+        GridLayout:
+            cols: 5
+            rows: 1
+            size_hint_y: None
+            size_hint_x: None
+            pos_hint: {"center_x":.267, "center_y":.65}
+            MDIconButton:
+                id: one
+                icon: "checkbox-blank-circle-outline"
+                icon_size: "30sp"
+                theme_icon_color: "Custom"
+                icon_color: hex("#000000FF")
+            MDIconButton:
+                id: two
+                icon: "checkbox-blank-circle-outline"
+                icon_size: "30sp"
+                theme_icon_color: "Custom"
+                icon_color: hex("#000000FF")
+            MDIconButton:
+                id: three
+                icon: "checkbox-blank-circle-outline"
+                icon_size: "30sp"
+                theme_icon_color: "Custom"
+                icon_color: hex("#000000FF")
+            MDIconButton:
+                id: four
+                icon: "checkbox-blank-circle-outline"
+                icon_size: "30sp"
+                theme_icon_color: "Custom"
+                icon_color: hex("#000000FF")
+            MDIconButton:
+                id: five
+                icon: "checkbox-blank-circle-outline"
+                icon_size: "30sp"
+                theme_icon_color: "Custom"
+                icon_color: hex("#000000FF")
+        GridLayout:
+            cols: 3
+            rows: 4
+            size_hint_y: None
+            size_hint_x: None
+            pos_hint: {"center_x":.3, "center_y":.5}
+            MDIconButton:
+                icon: "numeric-1"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(1)
+            MDIconButton:
+                icon: "numeric-2"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(2)
+            MDIconButton:
+                icon: "numeric-3"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(3)
+            MDIconButton:
+                icon: "numeric-4"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(4)
+            MDIconButton:
+                icon: "numeric-5"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(5)
+            MDIconButton:
+                icon: "numeric-6"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(6)
+            MDIconButton:
+                icon: "numeric-7"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(7)
+            MDIconButton:
+                icon: "numeric-8"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(8)
+            MDIconButton:
+                icon: "numeric-9"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(9)
+            MDIconButton:
+                icon: "blank"
+                icon_size: "60sp"
+            MDIconButton:
+                icon: "numeric-0"
+                theme_icon_color: "Custom"
+                icon_color: hex("#ADEFD1FF")
+                md_bg_color: hex("#00203FFF")
+                icon_size: "60sp"
+                on_release:
+                    root.input(0)
+            MDIconButton:
+                icon: "blank"
+                icon_size: "60sp"
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "bottom"
+        padding: dp(20)
+
+        MDIconButton:
+            icon: "account-switch"
+            font_size: sp(40)
+            theme_icon_color: "Custom"
+            icon_color: hex("#ADEFD1FF")
+            md_bg_color: hex("#00203FFF")
+            icon_size: "40sp"
+            on_release:
+                app.root.set_current("auth", side='right')
+    
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "bottom"
+        padding: dp(20)
+
+        MDIconButton:
+            icon: "backspace"
+            font_size: sp(40)
+            theme_icon_color: "Custom"
+            icon_color: hex("#ADEFD1FF")
+            md_bg_color: hex("#00203FFF")
+            icon_size: "40sp"
+            on_release:
+                root.input('b')

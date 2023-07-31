@@ -1,0 +1,198 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<VideoScreen>
+    layout: layout
+    FloatLayout:
+        FitImage:
+            source:"assets/Images/1239386.webp"
+        BoxLayout:
+            orientation: 'vertical'
+            pos_hint: {"center_x": .5,"center_y": .57}
+            size_hint_x: 1
+            size_hint_y: 1
+            BoxLayout:    
+                md_bg_color: [0, 0, 0, 1]
+                size_hint_y: None
+                height: root.height - dp(50)
+                SnapScroll:
+                    layout: layout
+                    BoxLayout:
+                        id: layout
+                        orientation: 'vertical'
+                        adaptive_height: True
+
+        FloatLayout:
+            MDIconButton:
+                id: post_profile
+                icon: "account-circle"
+                pos_hint: {"center_x": .9, "center_y": .55}
+                font_size: sp(40)
+                theme_icon_color: "Custom"
+                icon_color: hex("#FEE715FF")
+                md_bg_color: hex("#101820FF")
+                icon_size: "20sp"
+                on_release:
+                    root.see_account()
+            
+            MDIconButton:
+                id: caption
+                icon: "text-box"
+                pos_hint: {"center_x": .9, "center_y": .45}
+                font_size: sp(40)
+                theme_icon_color: "Custom"
+                icon_color: hex("#FEE715FF")
+                md_bg_color: hex("#101820FF")
+                icon_size: "20sp"
+                on_release:
+                    root.caption()
+            
+            MDIconButton:
+                id: like
+                icon: "heart-outline"
+                pos_hint: {"center_x": .9, "center_y": .35}
+                font_size: sp(40)
+                theme_icon_color: "Custom"
+                icon_color: hex("#FEE715FF")
+                md_bg_color: hex("#101820FF")
+                icon_size: "20sp"
+                on_release:
+                    root.increase_likes()
+        
+            MDIconButton:
+                id: share
+                icon: "share"
+                pos_hint: {"center_x": .9, "center_y": .25}
+                font_size: sp(40)
+                theme_icon_color: "Custom"
+                icon_color: hex("#FEE715FF")
+                md_bg_color: hex("#101820FF")
+                icon_size: "20sp"
+                on_release:
+                    root.share_videos()
+        
+            MDIconButton:
+                id: saved
+                icon: "bookmark-outline"
+                pos_hint: {"center_x": .9, "center_y": .15}
+                font_size: sp(40)
+                theme_icon_color: "Custom"
+                icon_color: hex("#FEE715FF")
+                md_bg_color: hex("#101820FF")
+                icon_size: "20sp"
+                on_release:
+                    root.save()
+
+        BoxLayout:
+            canvas:
+                Color:
+                    rgb: 0/255, 0/255, 0/255
+                Rectangle:
+                    size: self.size
+            orientation: 'horizontal'
+            padding: 25
+            spacing: 0
+            size_hint: 1, None
+            height: 50
+            MDIconButton:
+                icon: "home"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("home")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "magnify"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("music")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "newspaper-variant"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("news")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "video"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]     
+            MDIconButton:
+                icon: "account-circle"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("profile")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+
+<CaptionDialogContent>
+    orientation: "vertical"
+    adaptive_height: True
+    padding: dp(25)
+    spacing: dp(20)
+
+    MDLabel:
+        text: root.name
+        font_size: "20sp"
+
+    CaptionListItem:
+        text: root.caption
+        secondary_text: root.likes + " Likes "
+        icon: "heart"

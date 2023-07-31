@@ -1,0 +1,37 @@
+<SecurityScreen>
+    FloatLayout:
+        MDIconButton: 
+            icon: "arrow-left"
+            font_size: sp(40)
+            pos_hint: {"center_x": .1, "center_y": .92}
+            icon_size: "40sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            on_release: 
+                app.root.set_current("settings", side="right")
+        PLabel:
+            text: "Security"
+            pos_hint: {"center_x": .5, "center_y": .92}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "32sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+        PBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            pos_hint: {"center_x": .55, "center_y": .7}
+            spacing: "50sp"
+            ListItem:
+                text: "Two Step Verification"
+                secondary_text: "Email/Mobile + Security Pin"
+                icon: "focus-field-horizontal"
+            MDIconButton:
+                icon: "lock"
+                pos_hint: {"center_x": .45}
+                icon_size: "50sp"
+                md_bg_color: "blue"
+                ripple_scale: 0
+        Label:
+            pos_hint: {"center_x": .5, "center_y": .45}
+            text:"Meraki's End-to-End Chat Encryption and\nPassword Encryption keeps your personal\ndetails and chats between you and the\npeople you choose. Not even Meraki can\nread or see them."
+            font_name: "assets//Fonts//Poppins//Poppins-Regular.ttf"

@@ -1,0 +1,270 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<OtherProfileScreen>
+    FloatLayout:
+        FitImage:
+            source:"assets/Images/Backgrounds/bg (1).jpg"
+        PBoxLayout:
+            orientation: 'horizontal'
+            MDIconButton:
+                icon: "arrow-left"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .94}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.goto_previous_screen()
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+
+            PLabel:
+                size_hint_x: .1
+                
+            MDIconButton:
+                icon: "dots-vertical"
+                theme_icon_color: "Custom"
+                ripple_scale: 0
+                size_hint: .1, .1
+                pos_hint: {"center_x": .9, "center_y": .94}
+                md_bg_color: 0, 0, 0, 0
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release:
+                    root.menu()
+
+        FloatLayout:
+            MDIconButton:
+                id: dp
+                icon: root.dp
+                icon_size: "40sp"
+                pos_hint: {"center_x": .5, "center_y": .9}
+                ripple_scale: 0
+            Button:
+                id: user
+                text: root.username
+                font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+                font_size: "18sp"
+                size_hint: .68, .08
+                pos_hint: {"center_x": .5, "center_y": .8}
+                background_color: 0, 0, 0, 0
+                color: 1,1,1, 1
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 139/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            PLabel:
+                id: bio
+                text: root.bio_text
+                pos_hint: {"center_x": .5, "center_y": .73}
+                text_size: root.width, None
+                size: self.texture_size
+                font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+                font_size: "15sp"
+                halign: "center"
+                valign: "center"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+            BoxLayout:
+                orientation: 'horizontal'
+                Button:
+                    id: link
+                    text: "Link"
+                    font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+                    font_size: "18sp"
+                    size_hint: .68, .08
+                    pos_hint: {"center_x": .3, "center_y": .6}
+                    background_color: 0, 0, 0, 1
+                    color: 1,1,1, 1
+                    on_release:
+                        root.open_url()
+                    canvas.before:
+                        Color:
+                            rgb: (0/255, 0/255, 139/255, 1 )
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [22]
+                Button:
+                    text: "Chat"
+                    font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+                    font_size: "18sp"
+                    size_hint: .68, .08
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                    background_color: 0, 0, 0, 1
+                    color: 1,1,1, 1
+                    on_release:
+                        app.root.set_current("all_chat")
+                    canvas.before:
+                        Color:
+                            rgb: (0/255, 0/255, 139/255, 1 )
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [22]
+                Button:
+                    id: follow
+                    text: "Follow"
+                    font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+                    font_size: "18sp"
+                    size_hint: .68, .08
+                    pos_hint: {"center_x": .7, "center_y": .6}
+                    background_color: 0, 0, 0, 1
+                    color: 1,1,1, 1
+                    on_release:
+                        root.follow()
+                    canvas.before:
+                        Color:
+                            rgb: (0/255, 0/255, 139/255, 1 )
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [22]
+            MDBoxLayout:
+                padding: '5dp', 0, 0, '10dp'
+                pos_hint: {"center_y": .04}
+                RecycleView:
+                    id: post_scroll
+                    data: root.posts
+                    do_scroll_x: False
+                    do_scroll_y: True
+                    viewclass: 'PostCard'
+                    RecycleGridLayout:  
+                        id: post_grid
+                        adaptive_height: True
+                        spacing: '20dp'
+                        size_hint_y: None
+                        height: self.minimum_height
+                        cols: 3
+
+        BoxLayout:
+            canvas:
+                Color:
+                    rgb: 0/255, 0/255, 0/255
+                Rectangle:
+                    size: self.size
+            orientation: 'horizontal'
+            padding: 25
+            spacing: 0
+            size_hint: 1, None
+            height: 50
+            MDIconButton:
+                icon: "home"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("home")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "magnify"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("music")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "newspaper-variant"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("news")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "video"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("videos")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]     
+            MDIconButton:
+                id: profile
+                icon: "account-circle"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("profile")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    Ellipse:
+                        size: self.size
+                        pos: self.pos
+
+<EditDialogContent>
+    orientation: "vertical"
+    adaptive_height: True
+    padding: dp(15)
+    spacing: dp(10)
+
+    ListItem:
+        text: "Block and Report"
+        secondary_text: "Block and Report Account"
+        icon: "block-helper"
+        on_release:
+            root.parent.parent.dismiss()
+
+    ListItem:
+        text: "Share this Profile"
+        secondary_text: "Share with Others"
+        icon: "share"
+        on_release:
+            root.parent.parent.dismiss()

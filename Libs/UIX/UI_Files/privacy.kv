@@ -1,0 +1,77 @@
+<PrivacyScreen>
+    FloatLayout:
+        BoxLayout:
+            orientation: 'horizontal'
+            MDIconButton: 
+                icon: "arrow-left"
+                user_font_size: "40sp"
+                pos_hint: {"center_x": .1, "center_y": .94}
+                icon_size: "40sp"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                on_release: 
+                    app.root.set_current("settings")
+            PLabel:
+                text: "Privacy"
+                pos_hint: {"center_x": .7, "center_y": .94}
+                font_name: "assets\\Fonts\\Vegan.ttf"
+                font_size: "32sp"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+        Button:
+            text: "Reported Accounts"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+            font_size: "25sp"
+            halign: "left"
+            size_hint: .9,.07
+            text_size: self.size
+            pos_hint: {"center_x": .53, "center_y": .8}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 255/255, 255/255, 1
+            on_release: 
+                app.root.set_current("settings")
+            canvas.before:
+                Color:
+                    rgba: (1, 1, 1, 0)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "Blocked Accounts"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+            font_size: "25sp"
+            halign: "left"
+            size_hint: .9,.07
+            text_size: self.size
+            pos_hint: {"center_x": .53, "center_y": .7}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 255/255, 255/255, 1
+            on_release: 
+                app.root.set_current("settings")
+            canvas.before:
+                Color:
+                    rgba: (1, 1, 1, 0)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "Muted Accounts"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+            font_size: "25sp"
+            halign: "left"
+            size_hint: .9,.07
+            text_size: self.size
+            pos_hint: {"center_x": .53, "center_y": .6}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 255/255, 255/255, 1
+            on_release: 
+                app.root.set_current("settings")
+            canvas.before:
+                Color:
+                    rgba: (1, 1, 1, 0)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]

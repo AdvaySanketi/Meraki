@@ -1,0 +1,39 @@
+<HelpScreen>
+    FloatLayout:
+        MDIconButton: 
+            icon: "arrow-left"
+            font_size: sp(40)
+            pos_hint: {"center_x": .1, "center_y": .92}
+            icon_size: "40sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            on_release: 
+                app.root.set_current("settings", side="right")
+        PLabel:
+            text: "Help Center"
+            pos_hint: {"center_x": .5, "center_y": .92}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "32sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+
+        PBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            pos_hint: {"center_x": .55, "center_y": .54}
+            ListItem:
+                text: "Contact Us"
+                secondary_text: "Get Help and Report Bugs"
+                icon: "help-circle"
+            ListItem:
+                text: "Meraki Legal"
+                secondary_text: "Terms of Service"
+                icon: "file-document"
+                on_release:
+                    app.root.set_current('tos')
+            ListItem:
+                text: "App Info"
+                secondary_text: "Version 2.5.7"
+                icon: "information"
+                on_release:
+                    app.root.set_current('meraki')

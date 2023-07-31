@@ -1,0 +1,28 @@
+<TOSScreen>
+    FloatLayout:
+        MDIconButton: 
+            icon: "arrow-left"
+            font_size: sp(40)
+            pos_hint: {"center_x": .1, "center_y": .92}
+            icon_size: "40sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            on_release: 
+                app.root.set_current("help", side="right")
+        PLabel:
+            text: "Meraki Legal"
+            pos_hint: {"center_x": .5, "center_y": .92}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "32sp"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            
+        PBoxLayout:
+            orientation: "vertical"
+            adaptive_height: True
+            pos_hint: {"center_x": .55, "center_y": .54}
+            Label:
+                text:'Terms of Service ("Terms")'
+                halign: 'left'
+                font_name: 'assets//Fonts//Poppins//Poppins-ExtraBold.ttf'
+                font_size: "21sp"

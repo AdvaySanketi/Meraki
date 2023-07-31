@@ -1,0 +1,106 @@
+<MusicScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        TopBarMenu:
+            id: search
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: playlist_lbl.height + playlist_scrl.height + 30
+            MDLabel:
+                id: playlist_lbl
+                text: 'Artist Playlists'
+                size_hint_y: None
+                height: self.texture_size[1]
+                bold: True
+                padding: '10dp', '10dp'
+            MDBoxLayout:
+                adaptive_height: True
+                padding: '10dp', '10dp', 0, '10dp'
+                ScrollView:
+                    id: playlist_scrl
+                    do_scroll_x: True
+                    do_scroll_y: False
+                    size_hint_y: None
+                    bar_width: 0
+                    MDGridLayout:  
+                        id: playlist_grid
+                        adaptive_width: True 
+                        spacing: '20dp'
+                        rows: 1
+                        SizedPlaylistCard:
+                            id: original
+                            image: 'assets/Images/logo.png'
+                            name: ''
+                            on_release:
+                                root.playlist_id("individual")
+                        SizedPlaylistCard:
+                            id: taylor
+                            image: 'assets/Images/Playlist/1.jpg'
+                            name: 'Taylor Swift'
+                            on_release:
+                                root.playlist_id("taylor")
+                        SizedPlaylistCard:
+                            id: dragons
+                            image: 'assets/Images/Playlist/2.jpg'
+                            name: 'Imagine D'
+                            on_release:
+                                root.playlist_id("dragons")
+                        SizedPlaylistCard:
+                            id: kkumar
+                            image: 'assets/Images/Playlist/3.jpg'
+                            name: 'Kishore Kumar'
+                            on_release:
+                                root.playlist_id("kkumar")
+                        SizedPlaylistCard:
+                            id: puth
+                            image: 'assets/Images/Playlist/5.jpg'
+                            name: 'Charlie Puth'
+                            on_release:
+                                root.playlist_id("puth")
+                        SizedPlaylistCard:
+                            id: srk
+                            image: 'assets/Images/Playlist/6.jpg'
+                            name: 'SRK'
+                            on_release:
+                                root.playlist_id("srk")
+        MDBoxLayout:
+            orientation: 'vertical'
+            height: '50dp'
+            size_hint_y: None
+            MDBoxLayout:
+                padding: '10dp', 0
+                MDLabel:
+                    text: 'Music'
+                    bold: True
+                IconBtn:
+                    icon: 'filter-variant'
+        MDBoxLayout:
+            padding: '5dp', 0, 0, '10dp'
+            RecycleView:
+                id: music_scrl
+                data: root.all_data
+                do_scroll_x: False
+                do_scroll_y: True
+                bar_width: 0
+                viewclass: 'MusicCard'
+                RecycleBoxLayout:  
+                    id: music_grid
+                    default_size_hint_y: None
+                    height: self.minimum_height
+                    spacing: '5dp'
+                    orientation: 'vertical'
+                    size_hint_y: None       
+                    default_size: self.width, None
+
+        BottomPlayer:
+            track_name: root.cur_song['track_name']
+            singer: root.cur_song['singer']
+            image: root.cur_song['image']
+            on_release:
+                root.open_bottomplayer()
+
+<SizedPlaylistCard@PlaylistCard>:                    
+    size_hint: None, None
+    radius: 10, 
+    font_size: '12sp'

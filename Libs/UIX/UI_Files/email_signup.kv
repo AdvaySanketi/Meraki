@@ -1,0 +1,123 @@
+<ESignScreen>
+    FloatLayout:
+        FitImage:
+            source:"assets/Images/1239386.webp"
+        PLabel:
+            text: "Meraki"
+            pos_hint: {"center_x": .5, "center_y": .85}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "80sp"
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+        PLabel:
+            text: "Create a New Account"
+            pos_hint: {"center_x": .5, "center_y": .7}
+            font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+        FloatLayout:
+            size_hint: .85, .08
+            pos_hint: {"center_x": .5, "center_y": .57}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+            TextInput:
+                id: email
+                hint_text: "Email Address"
+                size_hint: 1, None
+                pos_hint: {"center_x": .5, "center_y": .5}
+                height: self.minimum_height
+                multiline: False
+                cursor_color: 57/255, 66/255, 143/255, 1
+                cursor_width: "2sp"
+                foreground_color: 57/255, 66/255, 143/255, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+                font_size: "18sp"
+        FloatLayout:
+            size_hint: .85, .08
+            pos_hint: {"center_x": .5, "center_y": .46}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+            NumericInput:
+                id: otp
+                hint_text: "OTP"
+                size_hint: 1, None
+                pos_hint: {"center_x": .5, "center_y": .5}
+                min_value : 9999
+                max_value : 100000
+                height: self.minimum_height
+                multiline: False
+                cursor_color: 57/255, 66/255, 143/255, 1
+                cursor_width: "2sp"
+                foreground_color: 57/255, 66/255, 143/255, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+                font_size: "18sp"
+                #on_focus: 
+                #    root.otp()
+        Button:
+            text: "Continue"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            size_hint: .68, .08
+            pos_hint: {"center_x": .5, "center_y": .35}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 165/255, 0/255, 1
+            on_release: 
+                root.sign_up()
+            canvas.before:
+                Color:
+                    rgb: (0/255, 0/255, 139/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "SignUp with Mobile No"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+            font_size: "14sp"
+            size_hint: .68, .08
+            pos_hint: {"center_x": .5, "center_y": .22}
+            background_color: 0, 0, 0, 0
+            color: 1,1,1,1
+            on_release: 
+                app.root.set_current("mobile_signup")
+            canvas.before:
+                Color:
+                    rgba: (0,0,0,0)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "Already Have an Account? Log in"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+            font_size: "14sp"
+            size_hint: .68, .08
+            pos_hint: {"center_x": .5, "center_y": .1}
+            background_color: 0, 0, 0, 0
+            color: 1,1,1,1
+            on_release: 
+                app.root.set_current("login")
+            canvas.before:
+                Color:
+                    rgba: (0,0,0,0)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]

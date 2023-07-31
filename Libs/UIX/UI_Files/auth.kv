@@ -1,0 +1,62 @@
+<AuthScreen>
+    FloatLayout:
+        FitImage:
+            source:"assets/Images/Backgrounds/bg (3).jpg"
+            opacity: .2
+        PLabel:
+            text: "Meraki"
+            pos_hint: {"center_x": .5, "center_y": .7}
+            font_name: "assets\\Fonts\\Vegan.ttf"
+            font_size: "80sp"
+            halign: "center"
+        Button:
+            text: "SignUp with Email"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            size_hint: .68, .08
+            pos_hint: {"center_x": .5, "center_y": .45}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 165/255, 0/255, 1
+            on_release:
+                app.root.set_current("profile")
+            canvas.before:
+                Color:
+                    rgba: (0/255, 0/255, 139/255, 1 )
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "SignUp with Mobile No."
+            font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            size_hint: .68, .08
+            pos_hint: {"center_x": .5, "center_y": .3}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 165/255, 0/255, 1
+            on_release:
+                app.root.set_current("profile")
+            canvas.before:
+                Color:
+                    rgba: (0/255, 0/255, 139/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+        Button:
+            text: "Login"
+            font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            size_hint: .68, .08
+            pos_hint: {"center_x": .5, "center_y": .15}
+            background_color: 0, 0, 0, 0
+            color: 255/255, 165/255, 0/255, 1
+            on_release:
+                app.root.set_current("profile")
+            canvas.before:
+                Color:
+                    rgba: (0/255, 0/255, 139/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]

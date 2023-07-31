@@ -1,0 +1,191 @@
+<SearchScreen>
+    FloatLayout:
+        FitImage:
+            source: "assets/Images/bg.jpg"
+            opacity: .5
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .85, .08
+            pos_hint: {"center_x": .5, "center_y": .9}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22]
+            TextInput:
+                id: search
+                hint_text: "Search"
+                size_hint: 1, None
+                pos_hint: {"center_x": .5, "center_y": .5}
+                height: self.minimum_height
+                multiline: False
+                cursor_color: 0,0,0, 1
+                cursor_width: "2sp"
+                foreground_color: 0,0,0, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "assets\\Fonts\\Poppins\\Poppins-Regular.ttf"
+                font_size: "18sp"
+
+        BoxLayout:
+            Button:
+                id: uservids
+                text: "Users/Videos"
+                opacity: .7 if root.song_btn else 1
+                font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+                font_size: "18sp"
+                size_hint: .68, .08
+                pos_hint: {"center_x": .3, "center_y": .77}
+                background_color: 0, 0, 0, 1
+                color: 1,1,1, 1
+                on_release:
+                    root.choose("uservids")
+                canvas.before:
+                    Color:
+                        rgb: (0/255, 0/255, 139/255, 1 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            Button:
+                id: songs
+                text: "Songs"
+                opacity: 1 if root.song_btn else .7
+                font_name: "assets\\Fonts\\Poppins\\Poppins-SemiBold.ttf"
+                font_size: "18sp"
+                size_hint: .68, .08
+                pos_hint: {"center_x": .5, "center_y": .77}
+                background_color: 0, 0, 0, 1
+                color: 1,1,1, 1
+                on_release:
+                    root.choose("songs")
+                canvas.before:
+                    Color:
+                        rgb: (0/255, 0/255, 139/255, 1 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+
+        BoxLayout:
+            pos_hint: {"center_x": .5, "center_y": .4}
+            size_hint_y: .65
+            ScrollView:
+                id: search_scrl
+                size_hint_y: None
+                height: self.parent.height
+                bar_active_color: [0,0,0,0]
+                bar_inactive_color: [0,0,0,0]
+                do_scroll: [False, True]
+                GridLayout:  
+                    id: search_results
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: dp(10)
+                    padding: dp(12)
+        
+        BoxLayout:
+            canvas:
+                Color:
+                    rgb: 0/255, 0/255, 0/255
+                Rectangle:
+                    size: self.size
+            orientation: 'horizontal'
+
+            padding: 25
+            spacing: 0
+            size_hint: 1, None
+            height: 50
+            MDIconButton:
+                icon: "home"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("home")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "magnify"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("music")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "newspaper-variant"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("news")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
+            MDIconButton:
+                icon: "video"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("videos")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]     
+            MDIconButton:
+                icon: "account-circle"
+                theme_icon_color: "Custom"
+                size_hint: .0, 0
+                pos_hint: {"center_x": .8, "center_y": .1}
+                background_color: 0, 0, 0, 0
+                color: 255/255, 165/255, 0/255, 1
+                icon_color: (255/255, 255/255, 255/255, 1)
+                icon_size: "40sp"
+                on_release: 
+                    app.root.set_current("profile")
+                canvas.before:
+                    Color:
+                        rgba: (0/255, 0/255, 0/255, 0 )
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [22]
