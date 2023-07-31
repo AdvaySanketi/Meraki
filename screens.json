@@ -1,0 +1,142 @@
+{
+    "auth": {
+        "import": "from BaseClass.auth_screen import AuthScreen",
+        "object": "AuthScreen()",
+        "kv": "Libs/UIX/UI_Files/auth.kv"
+    },
+    "daily_login": {
+        "import": "from BaseClass.dlogin_screen import DLoginScreen",
+        "object": "DLoginScreen()",
+        "kv": "Libs/UIX/UI_Files/daily_login.kv"
+    },
+    "login": {
+        "import": "from BaseClass.login_screen import LoginScreen",
+        "object": "LoginScreen()",
+        "kv": "Libs/UIX/UI_Files/login.kv"
+    },
+    "email_signup": {
+        "import": "from BaseClass.esign_screen import ESignScreen",
+        "object": "ESignScreen()",
+        "kv": "Libs/UIX/UI_Files/email_signup.kv"
+    },
+    "mobile_signup": {
+        "import": "from BaseClass.msign_screen import MSignScreen",
+        "object": "MSignScreen()",
+        "kv": "Libs/UIX/UI_Files/mobile_signup.kv"
+    },
+    "signup": {
+        "import": "from BaseClass.sign_screen import SignScreen",
+        "object": "SignScreen()",
+        "kv": "Libs/UIX/UI_Files/signup.kv"
+    },
+    "forgot": {
+        "import": "from BaseClass.forgot_screen import ForgotScreen",
+        "object": "ForgotScreen()",
+        "kv": "Libs/UIX/UI_Files/forgot.kv"
+    },
+    "profile": {
+        "import": "from BaseClass.profile_screen import ProfileScreen",
+        "object": "ProfileScreen()",
+        "kv": "Libs/UIX/UI_Files/profile.kv"
+    },
+    "other_profile": {
+        "import": "from BaseClass.otherprofile_screen import OtherProfileScreen",
+        "object": "OtherProfileScreen()",
+        "kv": "Libs/UIX/UI_Files/other_profile.kv"
+    },
+    "home": {
+        "import": "from BaseClass.home import HomePage",
+        "object": "HomePage()",
+        "kv": "Libs/UIX/UI_Files/home.kv"
+    },
+    "saved": {
+        "import": "from BaseClass.saved_screen import SavedScreen",
+        "object": "SavedScreen()",
+        "kv": "Libs/UIX/UI_Files/saved.kv"
+    },
+    "news": {
+        "import": "from BaseClass.news_screen import NewsScreen",
+        "object": "NewsScreen()",
+        "kv": "Libs/UIX/UI_Files/news.kv"
+    },
+    "allnews": {
+        "import": "from BaseClass.allnews_screen import AllNewsScreen",
+        "object": "AllNewsScreen()",
+        "kv": "Libs/UIX/UI_Files/allnews.kv"
+    },
+    "videos": {
+        "import": "from BaseClass.videos_screen import VideoScreen",
+        "object": "VideoScreen()",
+        "kv": "Libs/UIX/UI_Files/videos.kv"
+    },
+    "settings": {
+        "import": "from BaseClass.settings_screen import SettingsScreen",
+        "object": "SettingsScreen()",
+        "kv": "Libs/UIX/UI_Files/settings.kv"
+    },
+    "privacy": {
+        "import": "from BaseClass.privacy_screen import PrivacyScreen",
+        "object": "PrivacyScreen()",
+        "kv": "Libs/UIX/UI_Files/privacy.kv"
+    },
+    "security": {
+        "import": "from BaseClass.security_screen import SecurityScreen",
+        "object": "SecurityScreen()",
+        "kv": "Libs/UIX/UI_Files/security.kv"
+    },
+    "account": {
+        "import": "from BaseClass.account_screen import AccountScreen",
+        "object": "AccountScreen()",
+        "kv": "Libs/UIX/UI_Files/account.kv"
+    },
+    "help": {
+        "import": "from BaseClass.help_screen import HelpScreen",
+        "object": "HelpScreen()",
+        "kv": "Libs/UIX/UI_Files/help.kv"
+    },
+    "tos": {
+        "import": "from BaseClass.tos_screen import TOSScreen",
+        "object": "TOSScreen()",
+        "kv": "Libs/UIX/UI_Files/tos.kv"
+    },
+    "meraki": {
+        "import": "from BaseClass.meraki_screen import MerakiScreen",
+        "object": "MerakiScreen()",
+        "kv": "Libs/UIX/UI_Files/meraki.kv"
+    },
+    "upload": {
+        "import": "from BaseClass.upload_screen import UploadScreen",
+        "object": "UploadScreen()",
+        "kv": "Libs/UIX/UI_Files/upload.kv"
+    },
+    "search": {
+        "import": "from BaseClass.search_screen import SearchScreen",
+        "object": "SearchScreen()",
+        "kv": "Libs/UIX/UI_Files/search.kv"
+    },
+    "all_chat": {
+        "import": "from BaseClass.achat_screen import AChatScreen",
+        "object": "AChatScreen()",
+        "kv": "Libs/UIX/UI_Files/all_chat.kv"
+    },
+    "chat": {
+        "import": "from BaseClass.chat_screen import ChatScreen",
+        "object": "ChatScreen()",
+        "kv": "Libs/UIX/UI_Files/chat.kv"
+    },
+    "call": {
+        "import": "from BaseClass.call_screen import CallScreen",
+        "object": "CallScreen()",
+        "kv": "Libs/UIX/UI_Files/call.kv"
+    },
+    "music": {
+        "import": "from BaseClass.music_screen import MusicScreen",
+        "object": "MusicScreen()",
+        "kv": "Libs/UIX/UI_Files/music.kv"
+    },
+    "music_player": {
+        "import": "from BaseClass.musicplayer_screen import MusicPlayerScreen",
+        "object": "MusicPlayerScreen()",
+        "kv": "Libs/UIX/UI_Files/musicplayer.kv"
+    }
+}
