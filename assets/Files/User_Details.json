@@ -1,0 +1,46 @@
+{
+    "Users": [
+        {
+            "username": "AdvaySanketi",
+            "profile_pic": "/Portfolio\\Portfolio v2\\img\\favicon\\android-chrome-512x512.png",
+            "bio": "Carpe Diem",
+            "link": "https://www.youtube.com/channel/UCkIntmYrC2Oiy3enwRsNvMw"
+        },
+        {
+            "username": "Test1",
+            "profile_pic": "assets/Images/logo.png",
+            "bio": "Hi! Welcome to Meraki :D",
+            "link": "link"
+        },
+        {
+            "username": "Test2",
+            "profile_pic": "assets/Images/logo.png",
+            "bio": "Hi! Welcome to Meraki :D",
+            "link": "link"
+        },
+        {
+            "username": "ZachKing",
+            "profile_pic": "D://Quantum_CodeX//cs_project//mega_man.jfif",
+            "bio": "Believe in your heart that you are meant to live a life full of passion, purpose, magic and miracles",
+            "link": "https://www.instagram.com/zachking/"
+        },
+        {
+            "username": "Test3",
+            "profile_pic": "assets/Images/logo.png",
+            "bio": "Hi! Welcome to Meraki :D",
+            "link": "link"
+        },
+        {
+            "username": "Test4",
+            "profile_pic": "assets/Images/logo.png",
+            "bio": "Hi! Welcome to Meraki :D",
+            "link": "link"
+        },
+        {
+            "username": "Babayaga",
+            "profile_pic": "assets//Images//logo.png",
+            "bio": "Hi! Welcome to Meraki :D",
+            "link": "link"
+        }
+    ]
+}

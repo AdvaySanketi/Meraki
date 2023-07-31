@@ -1,0 +1,60 @@
+{
+    "all_data": [
+        {
+            "time": "5:14",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "Blackmail - Pal Pal Dil Ke Paas Tum Rehti Ho - Kishore Kumar",
+            "singer": "Shemaroo",
+            "path": "assets/Songs/kkumar\\Blackmail_-_Pal_Pal_Dil_Ke_Paas_Tum_(getmp3.pro).mp3",
+            "length": 314.736
+        },
+        {
+            "time": "4:13",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "Chala Jata Hoon",
+            "singer": "Kishore Kumar",
+            "path": "assets/Songs/kkumar\\Chala_Jata_Hoon_-_Mere_Jeevan_Saath_(getmp3.pro).mp3",
+            "length": 253.68
+        },
+        {
+            "time": "3:53",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "Ek Ladki Bheegi Bhagi Si",
+            "singer": "Kishore Kumar",
+            "path": "assets/Songs/kkumar\\Ek_Ladki_Bhigi_Bhagi_Si_Chalti_Ka_(getmp3.pro).mp3",
+            "length": 233.928
+        },
+        {
+            "time": "6:08",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "Khwab Ho Tum Ya Koi Haqeeqat",
+            "singer": "Kishore Kumar,S.D. Burman",
+            "path": "assets/Songs/kkumar\\Khwaab_Ho_Tum_Ya_Koi_Teen_Deviyan_(getmp3.pro).mp3",
+            "length": 368.568
+        },
+        {
+            "time": "4:30",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "Kati Patang Song",
+            "singer": "SuperHit Gaane",
+            "path": "assets/Songs/kkumar\\Pyar_Deewana_Hota_Hai_4K_Song_Kis_(getmp3.pro).mp3",
+            "length": 270.792
+        },
+        {
+            "time": "4:04",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "Yeh Shaam Mastani 4K | Kishore Kumar | Rajesh Khanna | Kati Patang | Classic Bollywood 4K Video Song",
+            "singer": "SuperHit Gaane",
+            "path": "assets/Songs/kkumar\\Yeh_Shaam_Mastani_4K_Kishore_Kuma_(getmp3.pro).mp3",
+            "length": 244.488
+        },
+        {
+            "time": "4:09",
+            "image": "assets/Images/Playlist/3.jpg",
+            "track_name": "ek ajanabee haseena se Ajanabee",
+            "singer": "Gaane Naye Purane",
+            "path": "assets/Songs/kkumar\\_4K_-__(getmp3.pro).mp3",
+            "length": 249.36
+        }
+    ]
+}

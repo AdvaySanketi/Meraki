@@ -1,0 +1,38 @@
+{
+    "videos": [
+        {
+            "id": "1",
+            "video": "assets/Videos/video (1).mp4",
+            "name": "AdvaySanketi",
+            "caption": "This is a caption \n Hello there \n hOLA",
+            "thumbnail": "assets/Images/logo.png",
+            "profile_pic": "",
+            "likes": [
+                "Babayaga"
+            ],
+            "views": "28"
+        },
+        {
+            "id": "2",
+            "video": "assets/Videos/video (2).mp4",
+            "name": "AdvaySanketi",
+            "caption": "This is a caption \n Hello there",
+            "thumbnail": "assets/Images/logo.png",
+            "profile_pic": "",
+            "likes": [
+                "AdvaySanketi"
+            ],
+            "views": "31"
+        },
+        {
+            "id": "3",
+            "video": "assets/Videos/video (3).mp4",
+            "name": "AdvaySanketi",
+            "caption": "This is a caption \n Hello there",
+            "thumbnail": "assets/Images/logo.png",
+            "profile_pic": "",
+            "likes": [],
+            "views": "30"
+        }
+    ]
+}

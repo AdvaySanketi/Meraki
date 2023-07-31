@@ -1,0 +1,58 @@
+{
+    "Thomas Brewer": {
+        "image": "assets/Images/Chat_DP/2.jpg",
+        "message": "Hey kivy is really awesome!",
+        "time": "9:02",
+        "about": "I like pizza",
+        "unread_messages": true
+    },
+    "Flenn Stewart": {
+        "image": "assets/Images/Chat_DP/1.jpg",
+        "message": "Do you done it! It's really awesome!",
+        "time": "9:10",
+        "about": "Nothing about me!",
+        "unread_messages": true
+    },
+    "Perry Walker": {
+        "image": "assets/Images/Chat_DP/3.jpg",
+        "message": "Okay, I will check it out",
+        "time": "8:11",
+        "about": "Hey there! I'm using Purp.",
+        "unread_messages": true
+    },
+    "Patrick Grant": {
+        "image": "assets/Images/Chat_DP/5.jpg",
+        "message": "I'm on work, Call me later",
+        "time": "7:51",
+        "about": "Spread Happiness",
+        "unread_messages": true
+    },
+    "Marion Thompson": {
+        "image": "assets/Images/Chat_DP/4.jpg",
+        "message": "I didn't feel comfortable, Please come home quick!",
+        "time": "8:01",
+        "about": "Boring Life...",
+        "unread_messages": false
+    },
+    "Reginald Kelley": {
+        "image": "assets/Images/Chat_DP/6.jpg",
+        "message": "Call me later, I'm on a Interview",
+        "time": "7:01",
+        "about": "Hey there! I'm using Meraki",
+        "unread_messages": false
+    },
+    "Ethan Hansen": {
+        "image": "assets/Images/Chat_DP/8.jpg",
+        "message": "Come quickly! The store is gonna close",
+        "time": "4:42",
+        "about": "Not a another man",
+        "unread_messages": false
+    },
+    "Ethan Hunt": {
+        "image": "assets/Images/Chat_DP/7.jpg",
+        "message": "Let's see tomorrow, because of raining in my town",
+        "time": "6:12",
+        "about": "Hey there! I'm using Meraki",
+        "unread_messages": false
+    }
+}

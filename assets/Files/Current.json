@@ -1,0 +1,13 @@
+{
+    "Song": {
+        "time": "4:13",
+        "image": "assets/Images/Playlist/3.jpg",
+        "track_name": "Chala Jata Hoon",
+        "singer": "Kishore Kumar",
+        "path": "assets/Songs/kkumar\\Chala_Jata_Hoon_-_Mere_Jeevan_Saath_(getmp3.pro).mp3",
+        "length": 253.68
+    },
+    "Video": {
+        "id": "None"
+    }
+}

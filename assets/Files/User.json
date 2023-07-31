@@ -1,0 +1,53 @@
+{
+    "Users": [
+        {
+            "username": "Test1",
+            "password": "test1",
+            "pin": "01234",
+            "email": "test1@gmail.com",
+            "mobile no.": null
+        },
+        {
+            "username": "Test2",
+            "password": "test2",
+            "pin": "56789",
+            "email": "test2@email.com",
+            "mobile no.": null
+        },
+        {
+            "username": "AdvaySanketi",
+            "password": "acda2811",
+            "pin": "28114",
+            "email": null,
+            "mobile no.": "7777777777"
+        },
+        {
+            "username": "ZachKing",
+            "password": "zachdoesmagic",
+            "pin": "33001",
+            "email": "zachdoesmagic@gmail.com",
+            "mobile no.": null
+        },
+        {
+            "username": "Test3",
+            "password": "test3",
+            "pin": "09876",
+            "email": null,
+            "mobile no.": "1234567890"
+        },
+        {
+            "username": "Test4",
+            "password": "test4",
+            "pin": "54321",
+            "email": "test4@gmail.com",
+            "mobile no.": null
+        },
+        {
+            "username": "Babayaga",
+            "password": "babayaga",
+            "pin": "20039",
+            "email": "hola@gmail.com",
+            "mobile no.": null
+        }
+    ]
+}
